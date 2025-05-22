@@ -46,7 +46,13 @@ export default function Hero() {
   return (
     <S.Container>
       <S.SubContainer>
-        <Post content={save} isBtn={true} />
+        <Post
+          content={save}
+          isBtn={true}
+          width="369px"
+          height="224px"
+          hero={true}
+        />
         <BlackBar />
       </S.SubContainer>
       <S.Row>

@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import Layout from "@/pages/components/layout";
+import Layout from "@/pages/layout";
 import PostId from "@/pages/modules/screens/dynamic";
 import Image from "next/image";
 import Mock from "@/pages/assets/images/mock.png"; // ajuste se necessário

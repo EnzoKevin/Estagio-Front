@@ -38,6 +38,7 @@ export const h2 = styled.h2`
   letter-spacing: 0px;
   vertical-align: middle;
   overflow: hidden;
+  //@ts-ignore
   text-wrap: balance;
 `;
 

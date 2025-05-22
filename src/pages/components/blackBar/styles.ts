@@ -3,12 +3,17 @@ import styled from "styled-components";
 export const Container = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 
   padding: 10px;
   background-color: #000;
-
   color: #fff;
+
+  max-height: 450px; // limite ajustável
+  overflow-y: auto; // permite rolagem se passar do limite
+
+  gap: 12px; // adiciona espaçamento entre elementos
+  border-radius: 8px;
 `;
 
 export const H1 = styled.h1`
@@ -41,4 +46,8 @@ export const P = styled.p`
   letter-spacing: 0px;
   vertical-align: middle;
   overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3; // mostra no máx. 3 linhas
+  -webkit-box-orient: vertical;
 `;

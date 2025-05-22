@@ -13,9 +13,19 @@ interface Post {
   };
   Readable?: boolean;
   isBtn?: boolean;
+  width?: string;
+  height?: string;
+  hero?: boolean;
 }
 
-export default function Post({ content, isBtn, Readable }: Post) {
+export default function Post({
+  content,
+  isBtn,
+  Readable,
+  width,
+  height,
+  hero,
+}: Post) {
   const save = {
     id: 0,
     user_id: 0,
@@ -27,12 +37,12 @@ export default function Post({ content, isBtn, Readable }: Post) {
 
   return (
     <S.Container>
-      <S.Figure>
+      <S.Figure width={width} height={height} hero={hero}>
         <Image src={Mock} alt="" className="NextImage" />
       </S.Figure>
       <S.subContainer>
         <S.Texts>
-          <S.H1>{content?.title}</S.H1>
+          <S.H1 width={width}>{content?.title}</S.H1>
 
           {Readable ? <S.P>{content?.content}</S.P> : null}
         </S.Texts>

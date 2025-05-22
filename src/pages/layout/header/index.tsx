@@ -1,7 +1,7 @@
 import { Icon } from "@/pages/assets/icons";
 import * as S from "./styles";
 import Link from "next/link";
-import Button from "../../button";
+import Button from "../../components/button";
 
 export default function Header() {
   const UserOn = 0;

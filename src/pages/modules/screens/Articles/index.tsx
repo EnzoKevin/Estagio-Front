@@ -57,7 +57,11 @@ export default function Articles() {
   return (
     <S.Container>
       {save.map((save) => {
-        return <Post key={save.id} content={save} Readable={true} />;
+        return (
+          <S.SubContainer key={save.id}>
+            <Post key={save.id} content={save} Readable={true} width="369px" />;
+          </S.SubContainer>
+        );
       })}
     </S.Container>
   );
