@@ -1,10 +1,10 @@
 import Layout from "@/pages/layout";
-import PerfilForm from "@/pages/modules/screens/PerfilForm";
+import NewArticle from "@/pages/modules/screens/forms";
 
 export default function Home() {
   return (
     <Layout>
-      <PerfilForm />
+      <NewArticle />
     </Layout>
   );
 }

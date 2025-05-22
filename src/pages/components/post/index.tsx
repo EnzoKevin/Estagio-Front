@@ -15,7 +15,7 @@ interface Post {
   isBtn?: boolean;
   width?: string;
   height?: string;
-  hero?: boolean;
+  $hero?: boolean;
 }
 
 export default function Post({
@@ -24,7 +24,7 @@ export default function Post({
   Readable,
   width,
   height,
-  hero,
+  $hero,
 }: Post) {
   const save = {
     id: 0,
@@ -37,7 +37,7 @@ export default function Post({
 
   return (
     <S.Container>
-      <S.Figure width={width} height={height} hero={hero}>
+      <S.Figure width={width} height={height} $hero={$hero}>
         <Image src={Mock} alt="" className="NextImage" />
       </S.Figure>
       <S.subContainer>

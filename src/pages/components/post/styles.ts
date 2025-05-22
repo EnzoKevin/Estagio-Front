@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface Hero {
   width?: string;
   height?: string;
-  hero?: boolean;
+  $hero?: boolean;
 }
 
 export const Container = styled.div`
@@ -32,8 +32,8 @@ export const Figure = styled.figure<Hero>`
   @media screen and (max-width: 800px) {
     border-radius: 15px;
 
-    ${({ hero }) =>
-      hero
+    ${({ $hero }) =>
+      $hero
         ? `.NextImage {
       width: 500px;
       height: 550px;
