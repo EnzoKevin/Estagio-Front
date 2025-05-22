@@ -10,16 +10,15 @@ export const Container = styled.div`
 
 export const Top = styled.div`
   display: grid;
-
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 45% 55%;
 
   align-items: center;
   justify-content: center;
 
   figure .NextImage {
-    width: 177px;
-    height: 177px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 /1;
   }
 
   h1 {
@@ -27,8 +26,7 @@ export const Top = styled.div`
     align-items: center;
     justify-content: center;
 
-    width: 177px;
-    height: 177px;
+    width: 100%;
   }
 `;
 

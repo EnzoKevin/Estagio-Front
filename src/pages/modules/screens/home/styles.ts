@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: grid;
-
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 export const SubContainer = styled.div`
@@ -13,8 +13,6 @@ export const SubContainer = styled.div`
 `;
 
 export const Row = styled.div`
-  display: grid;
-
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0px;
+  display: flex;
+  gap: 10px;
 `;

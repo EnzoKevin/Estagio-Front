@@ -3,8 +3,27 @@ import * as S from "./styles";
 import Image from "next/image";
 import Mock from "@/pages/assets/images/mock.png";
 
-export default function Post() {
-  const IsBtn = 1;
+interface Post {
+  content?: {
+    id: any;
+    user_data: { user_id: any; user_name: any };
+    title: any;
+    content: any;
+    date: any;
+  };
+  Readable?: boolean;
+  isBtn?: boolean;
+}
+
+export default function Post({ content, isBtn, Readable }: Post) {
+  const save = {
+    id: 0,
+    user_id: 0,
+    title:
+      "Desvendando o JavaScript: Dicas e Técnicas Essenciais para Desenvolvedores",
+    content:
+      "TypeScript, uma superconjunto de JavaScript, tem se tornado uma escolha popular entre desenvolvedores para garantir código mais seguro e fácil de manter. Neste artigo, vamos explorar os benefícios da tipagem estática no...",
+  };
 
   return (
     <S.Container>
@@ -12,16 +31,23 @@ export default function Post() {
         <Image src={Mock} alt="" className="NextImage" />
       </S.Figure>
       <S.subContainer>
-        <h1>
-          Desvendando o JavaScript: Dicas e Técnicas Essenciais para
-          Desenvolvedores
-        </h1>
+        <S.Texts>
+          <S.H1>{content?.title}</S.H1>
+
+          {Readable ? <S.P>{content?.content}</S.P> : null}
+        </S.Texts>
         <S.User>
-          <Image src={Mock} alt="" className="UserImage" />
-          <p>
-            por <span>John Doe</span>
-          </p>
-          {IsBtn ? <Button>Ler Mais</Button> : null}
+          <S.UserInfo>
+            <Image src={Mock} alt="" className="UserImage" />
+            {/* <p>
+              por <span>John Doe</span> - <span>25/05/2025</span>
+            </p> */}
+            <S.P>
+              por <span>{content?.user_data.user_name}</span> -{" "}
+              <span>{content?.date}</span>
+            </S.P>
+          </S.UserInfo>
+          {isBtn ? <Button>Ler Mais</Button> : null}
         </S.User>
       </S.subContainer>
     </S.Container>

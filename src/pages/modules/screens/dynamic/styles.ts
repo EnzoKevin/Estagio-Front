@@ -6,7 +6,7 @@ interface Readable {
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%; //550px
+  height: fit-content; //550px
 
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ export const Texts = styled.div`
 export const H1 = styled.h1`
   font-family: Montserrat;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 36px;
   line-height: 120%;
   letter-spacing: 0px;
   vertical-align: middle;
@@ -51,10 +51,11 @@ export const H1 = styled.h1`
 export const P = styled.p`
   font-family: Montserrat;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 120%;
+  font-size: 20px;
+  line-height: 130%;
   letter-spacing: 0px;
-  vertical-align: middle;
+
+  white-space: pre-line;
 `;
 
 export const User = styled.div`
@@ -64,18 +65,22 @@ export const User = styled.div`
   justify-content: space-between;
   gap: 30px;
 
-  .UserImage {
-    width: 40px;
-    height: 40px;
-
-    border-radius: 25px;
-  }
+  border-bottom: 1px solid #09090933;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 `;
 
 export const UserInfo = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+
+  .UserImage {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 25px;
+  }
 `;
 
 /* export const h1 = styled.h1`

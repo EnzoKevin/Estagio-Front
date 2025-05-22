@@ -8,7 +8,7 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  margin: 10px 0px 0px 0px;
+  margin: 10px 0px 40px 0px;
 `;
 
 export const Icon = styled.figure``;

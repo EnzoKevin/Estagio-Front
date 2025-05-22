@@ -1,18 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  max-width: 373px;
-  height: 550px;
-
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  justify-content: space-evenly;
+
   padding: 10px;
   background-color: #000;
 
   color: #fff;
-
-  overflow-y: scroll;
 `;
 
 export const H1 = styled.h1`
@@ -25,10 +21,7 @@ export const H1 = styled.h1`
   vertical-align: middle;
 `;
 
-export const subContainer = styled.div`
-  width: 341;
-  height: 80;
-`;
+export const subContainer = styled.div``;
 
 export const H2 = styled.h2`
   font-family: Montserrat;
@@ -37,6 +30,7 @@ export const H2 = styled.h2`
   line-height: 120%;
   letter-spacing: 0px;
   vertical-align: middle;
+  margin: 0px 0px 5px 0px;
 `;
 
 export const P = styled.p`
