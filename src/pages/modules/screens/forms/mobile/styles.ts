@@ -10,12 +10,16 @@ export const Container = styled.div`
 
   padding: 0px 20px;
 
+  position: absolute;
+  visibility: hidden;
+
   display: flex;
   flex-direction: column;
 
   @media screen and (max-width: 900px) {
-    position: absolute;
-    visibility: hidden;
+    visibility: visible;
+    position: relative;
+    margin: 0px 0px 100px 0px;
   }
 `;
 
@@ -24,9 +28,26 @@ export const Top = styled.div`
 
   display: flex;
   justify-content: space-between;
+
+  margin-bottom: 20px;
+`;
+
+export const Photo = styled.div`
+  width: 100%;
+
+  display: flex;
+  gap: 30px;
+`;
+
+export const Figure = styled.figure`
+  .NextImage {
+    width: 120px;
+    height: 100px;
+  }
 `;
 
 export const name = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -49,7 +70,7 @@ export const name = styled.div`
 `;
 
 export const input = styled.input`
-  width: 442px;
+  width: 100%;
   height: 48px;
   min-width: 240px;
   padding: 0px 0px 0px 10px;
@@ -71,14 +92,14 @@ export const FileButton = styled.button`
 `;
 
 export const Button = styled.button<LoD>`
-  width: 100;
-  height: 40;
+  width: 100%;
+  height: 40px;
   gap: 8px;
-  padding-top: 10px;
-  padding-right: 16px;
-  padding-bottom: 10px;
-  padding-left: 16px;
+  margin-top: 30px;
+  padding: 10px 16px;
   border-radius: 8px;
+
+  color: #fff;
 
   background-color: ${({ $red }) => ($red ? "#FF3B30" : "#18181B")};
 `;
@@ -86,18 +107,4 @@ export const Button = styled.button<LoD>`
 export const BtnGroup = styled.div`
   display: flex;
   gap: 20px;
-`;
-
-export const Photo = styled.div`
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const Figure = styled.figure`
-  .NextImage {
-    width: 250px;
-    height: 300px;
-  }
 `;
