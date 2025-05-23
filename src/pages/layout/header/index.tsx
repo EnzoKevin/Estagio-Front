@@ -16,9 +16,9 @@ export default function Header() {
         <Link href={"/Artigos"}>Artigos</Link>
         {UserOn ? null : (
           <>
-            | <Link href={"/login"}>Login</Link>
+            | <Link href={"/perfil"}>Login</Link>
             <Button>
-              <Link href={"/register"}>Registrar</Link>
+              <Link href={"/perfil"}>Registrar</Link>
             </Button>
           </>
         )}
